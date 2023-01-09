@@ -61,34 +61,32 @@ void insertAtLast(struct User newUser)
 void  Create_New_Account()
 {
 	struct User newAcc;
-	printf("- Full Name: ");
+	printf("- Full Name: \n");
 	getchar();
 	scanf("%s",newAcc.Name);
 	getchar();
-	printf("- Full Address: ");
-	getchar();
+	printf("- Full Address: \n");
+	getchar();//before scanf srting only
 	scanf("%s",newAcc.address);
 	getchar();
-	printf("- Age: ");
-	getchar();
-	scanf("%d",&newAcc.age);
-	getchar();
+	printf("- Age: \n");
+	scanf("%d",&(newAcc.age));
 	do
 	{
-		printf("- National ID: ");
+		printf("- National ID: \n");
 		fflush(stdout);
 		scanf("%s",newAcc.National_ID);
 	}while(strlen(newAcc.National_ID)!=14);
 
-	if((newAcc.age) <=21)
+	if((newAcc.age)<21)
 	{
 		printf("- Guardian Full Name: ");
 		getchar();
-		scanf(" %s",newAcc.Guardian_Name);
+		scanf("%s",newAcc.Guardian_Name);
 		getchar();
 		printf("- Guardian National ID: ");
 		getchar();
-		scanf(" %s",newAcc.Guardian_National_ID);
+		scanf("%s",newAcc.Guardian_National_ID);
 	}
 
 	printf("- Balance: ");
